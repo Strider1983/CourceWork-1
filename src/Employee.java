@@ -37,4 +37,9 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+
+    @Override
+    public String toString() {
+        return "ФИО: " + name + ", Отдел №" + department + "Зарплата - " + salary + "iD-" + iD;
+    }
 }
