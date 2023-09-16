@@ -20,5 +20,12 @@ public class Main {
 
         int salarySum = Tasks.calculateTotalSalary(employees);
         System.out.println("Сумма всех зарплат = " + salarySum + " рублей");
+        Employee employeeWithMinSalary = Tasks.findMinSalary(employees);
+        System.out.println("Сотрудник с минимкальной зарплатой: " + employeeWithMinSalary);
+        Employee employeeWithMaxSalary = Tasks.findMaxSalary(employees);
+        System.out.println("Сотрудник с максимальной зарплатой: " + employeeWithMaxSalary);
+        System.out.println("Средняя зарплата = " + Tasks.calculateEverSalary(employees));
+        System.out.println("__________________");
+        Tasks.printNames(employees);
     }
 }
