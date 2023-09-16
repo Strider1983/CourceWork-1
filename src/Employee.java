@@ -6,6 +6,8 @@ public class Employee {
     private static int couter = 0;
 
     public Employee(String name, int department, int salary) {
+        checkDepartment(department);
+
         this.name = name;
         this.department = department;
         this.salary = salary;
@@ -37,9 +39,14 @@ public class Employee {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+    private void checkDepartment (int department) {
+        if (department < 1 || department > 5) {
+            throw new IllegalArgumentException("Неварный номер отдела. Существуют отдклы от 1 до 5");
+        }
+    }
 
     @Override
     public String toString() {
-        return "ФИО: " + name + ", Отдел №" + department + "Зарплата - " + salary + "iD-" + iD;
+        return "ФИО: " + name + ", Отдел №" + department + ", Зарплата - " + salary + "р., iD-" + iD;
     }
 }
