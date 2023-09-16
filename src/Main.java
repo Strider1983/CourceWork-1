@@ -16,5 +16,9 @@ public class Main {
         employees[9] = new Employee("Русаков Лев Никитич", 2, 38_000);
 
         Tasks.printEmployees(employees);
+        System.out.println("__________________");
+
+        int salarySum = Tasks.calculateTotalSalary(employees);
+        System.out.println("Сумма всех зарплат = " + salarySum + " рублей");
     }
 }
